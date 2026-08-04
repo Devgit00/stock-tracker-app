@@ -10,7 +10,7 @@ FINNHUB_API_KEY ='d9oadhpe01qt6o9avrig'
 @app.route('/')
 def home():
     return jsonify({'message': 'Stock Tracker Running!'})
-@app.route('test')
+@app.route('/test')
 def test():
     return "Test Working"
 
