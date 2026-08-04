@@ -16,18 +16,10 @@ def test():
 
 @app.route('/api/stock/<symbol>')
 def get_stock(symbol):
-    url = f"https://finnhub.io/api/v1/quote?symbol={symbol}&token={FINNHUB_API_KEY}"
-    try:
-        data = requests.get(url, timeout=10).json()
-        return jsonify({
-            'symbol': symbol,
-            'price': data.get('c'),
-            'change': data.get('d'),
-            'changePercent': data.get('dp')
-        })
-    except:
-        return jsonify({'error': 'API Error'}), 500
-
+    return jsonify({
+        "symbol":symbol,
+        "message":"Route is working"
+    })
 if __name__ == '__main__':
     
     app.run(host='0.0.0.0',port=10000)
