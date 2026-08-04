@@ -5,7 +5,7 @@ import requests
 app = Flask(__name__)
 CORS(app)
 
-FINNHUB_API_KEY ='d9oadhpe01qt6o9avrig'
+FINNHUB_API_KEY ='d9oadhpr01qt6o9avri0d9oadhpr01qt6o9avrig'
 
 @app.route('/')
 def home():
